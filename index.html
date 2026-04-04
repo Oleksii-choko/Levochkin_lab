@@ -86,8 +86,16 @@
 
       <main class="content">
         <header class="hero">
-          <h1>OLEKSII LIEVOCHKIN</h1>
-          <p>JUNIOR NODE.JS BACKEND DEVELOPER</p>
+          <div class="hero-top">
+            <div>
+              <h1>OLEKSII LIEVOCHKIN</h1>
+              <p>JUNIOR NODE.JS BACKEND DEVELOPER</p>
+            </div>
+
+            <button id="themeToggle" class="theme-toggle" type="button">
+              Switch theme
+            </button>
+          </div>
         </header>
 
         <section class="timeline-section">
@@ -203,10 +211,49 @@
           </div>
         </section>
 
+        <section class="timeline-section">
+          <div class="marker">
+            <div class="icon projects-icon"></div>
+            <div class="line short"></div>
+          </div>
+          <div class="section-body">
+            <h2>EMPLOYER COMMENTS</h2>
+            <div id="commentsList" class="comments-list">
+              <p>Loading comments...</p>
+            </div>
+          </div>
+        </section>
+
         <footer>
           <small>CV — Oleksii Lievockhin</small>
+          <div id="storageInfo" class="storage-info"></div>
         </footer>
       </main>
     </div>
+    <div id="feedbackModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeModal" class="close-modal" type="button">&times;</button>
+        <h2>Feedback Form</h2>
+
+        <form
+          id="feedbackForm"
+          action="https://formspree.io/f/xpqooarw"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <input type="tel" name="phone" placeholder="Your phone" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your message"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

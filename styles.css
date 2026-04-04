@@ -382,3 +382,147 @@ footer {
     padding: 10px 24px 20px;
   }
 }
+
+.light-theme {
+  --bg-page: #e7e7e7;
+  --bg-cv: #efefef;
+  --bg-sidebar: #dcdcdc;
+  --navy: #2f3b56;
+  --text: #2f3b56;
+  --line: #2f3b56;
+  --white: #ffffff;
+}
+
+.dark-theme {
+  --bg-page: #1c1f26;
+  --bg-cv: #252a33;
+  --bg-sidebar: #2f3541;
+  --navy: #111827;
+  --text: #f3f4f6;
+  --line: #cbd5e1;
+  --white: #ffffff;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.theme-toggle {
+  border: none;
+  background: #ffffff;
+  color: #2f3b56;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.comments-list {
+  display: grid;
+  gap: 14px;
+}
+
+.comment-card {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(47, 59, 86, 0.15);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.comment-card h4 {
+  margin: 0 0 8px;
+}
+
+.storage-info {
+  margin-top: 14px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.storage-info h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.storage-info ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.storage-info li {
+  margin-bottom: 6px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  color: #2f3b56;
+  padding: 28px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font: inherit;
+}
+
+#feedbackForm button {
+  border: none;
+  background: #2f3b56;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+  }
+}
